@@ -40,3 +40,13 @@ gem 'spring',        group: :development
 
 # Use Bootstrap UI Framework
 gem 'bootstrap-sass', '~> 3.3.4'
+
+group :development, :test do
+  gem 'sqlite3'
+  gem 'pry'
+end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
