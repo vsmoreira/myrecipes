@@ -8,8 +8,12 @@
     </p>
   </div>
   <div class = "col-md-8">
-    <%= link_to "Melhore sua receita", edit_recipe_path(@recipe), class: "btn btn-info pull-right" %>
+    <%= link_to "Improve your recipe", edit_recipe_path(@recipe), class: "btn btn-info pull-right" %>
     <h3><%= @recipe.summary %></h3>
+    <div class="thumbnail">
+      <%= image_tag(@recipe.picture.url) if @recipe.picture? %>
+    </div>
+    
     <div class="well">
       <p>
         <strong>Steps:</strong>
